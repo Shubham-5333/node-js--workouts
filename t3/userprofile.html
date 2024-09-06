@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - E-commerce</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="path/to/your/styles.css"> <!-- Include your custom styles if needed -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+
+<style>
+    body, h1, h2, h3, p {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f4f4;
+    }
+
+    .container {
+        margin-top: 50px;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .user-info-col {
+        flex: 1;
+        min-width: 250px;
+        max-width: 400px;
+        margin-right: 10px;
+    }
+
+    .user-info-card {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .user-info-card img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .logout-btn {
+        margin-top: 10px;
+    }
+
+    .icon-container-col {
+        flex: 1;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .icon-container {
+        text-align: center;
+        margin-top: 20px;
+        color: #333;
+        text-decoration: none;
+        flex: 0 0 45%; /* Adjust this value to control icon grid width */
+    }
+
+    .icon-container i {
+        margin-bottom: 10px;
+        color: #000000;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 767px) {
+        .icon-container-col {
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .user-info-col {
+            margin-right: 0;
+        }
+    }
+</style>
+
+<body>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="user-info-col">
+                <!-- User Information -->
+                <div class="user-info-card">
+                    <h5 class="card-title">User Information</h5>
+                    <p><strong>Name:</strong> John Doe</p>
+                    <p><strong>Email:</strong> john@example.com</p>
+                    <p><strong>Address:</strong> 123 Main Street, City, Country</p>
+                    <!-- Add more user details as needed -->
+                    <button class="btn btn-danger logout-btn" onclick="logout()">Logout</button>
+                </div>
+            </div>
+
+            <div class="icon-container-col">
+                <a href="#orders" class="icon-container">
+                    <i class="fas fa-shopping-bag fa-3x"></i>
+                    <p>Orders</p>
+                </a>
+                <a href="#wishlist" class="icon-container">
+                    <i class="fas fa-heart fa-3x"></i>
+                    <p>Wishlist</p>
+                </a>
+                <a href="#addresses" class="icon-container">
+                    <i class="fas fa-map-marker-alt fa-3x"></i>
+                    <p>Addresses</p>
+                </a>
+                <a href="#wallet" class="icon-container">
+                    <i class="fas fa-wallet fa-3x"></i>
+                    <p>Wallet</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function logout() {
+            // Add your logout logic here
+            alert("Logout button clicked. Add your logout logic here.");
+        }
+    </script>
+
+</body>
+
+</html>

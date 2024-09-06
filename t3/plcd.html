@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order Placed Animation</title>
+<style>
+    @keyframes orderPlaced {
+        0% {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .order-placed {
+        animation: orderPlaced 1s ease-in-out;
+    }
+
+    /* Additional styling for demonstration */
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .order-message {
+        padding: 20px;
+        background-color: #04ff00;
+        color: #000000;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+    }
+
+    .continue-shopping {
+        margin-top: 20px;
+        text-decoration: none;
+        color: #fff;
+        background-color: #333;
+        padding: 10px 20px;
+        border-radius: 5px;
+        display: inline-block;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="order-message order-placed">
+        <h2>Your order has been placed!</h2>
+        <p>Thank you for shopping with us.</p>
+        <a href="#" class="continue-shopping">Continue Shopping</a>
+    </div>
+</div>
+</body>
+</html>

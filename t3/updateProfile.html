@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wishlist</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* body {
+      padding-top: 20px;
+    } */
+    .wishlist-table {
+      width: 50%;
+      margin: 0 auto;
+    }
+    .wishlist-image {
+      max-width: 50px;
+      max-height: 50px;
+    }
+    .delete-button {
+      width: 80px;
+      padding: 6px 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1 class="text-center mb-4">My Wishlist</h1>
+  
+  <table class="table wishlist-table">
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th>Item</th>
+        <th>Description</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><img src="https://via.placeholder.com/150" alt="Item Image" class="wishlist-image"></td>
+        <td>Item 1</td>
+        <td>Description of Item 1.</td>
+        <td><a href="#" class="btn btn-danger delete-button">Delete</a></td>
+      </tr>
+      <tr>
+        <td><img src="https://via.placeholder.com/150" alt="Item Image" class="wishlist-image"></td>
+        <td>Item 2</td>
+        <td>Description of Item 2.</td>
+        <td><a href="#" class="btn btn-danger delete-button">Delete</a></td>
+      </tr>
+      <!-- Add more wishlist items here -->
+    </tbody>
+  </table>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

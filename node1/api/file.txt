@@ -1,0 +1,14 @@
+damname = firozname = firoz
+ame = firoz
+name = firoz
+ name = firoz
+ name = firz
+ name = fiz
+ name = fz
+ name = z
+ name = za
+ name = zay
+ name = zaye
+ name = zayed
+ name = zayed
+ name = zayed

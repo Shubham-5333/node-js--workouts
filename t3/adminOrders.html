@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eCommerce Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        #sidebar {
+            background-color: #ffffff;
+            color: #fff;
+            padding-top: 20px;
+        }
+
+        #sidebar a {
+            padding: 10px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #000000;
+            display: block;
+            transition: 0.3s;
+        }
+
+        #sidebar a:hover {
+            color: #3c01fffe;
+        }
+
+
+        #sidebar .logout {
+            color: #fff;
+            background-color: #ff0000;
+            border-radius: 5px;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        #content {
+            padding: 20px;
+        }
+
+        .dashboard-section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .statistic-box {
+            background-color: rgba(171, 194, 194, 0.141);
+            border: 1px solid #000000;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .statistic-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .statistic-value {
+            font-size: 24px;
+            color: #27ae60;
+        }
+
+        .statistic-icon {
+            font-size: 36px;
+            margin-bottom: 10px;
+            color: #3498db;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <nav class="col-md-2 col-sm-12" id="sidebar">
+            <div class="sidebar-sticky text-dark">
+                <h2 class="text-center">ADMIN</h2>
+                <a href="#"><i class="fas fa-home"></i> Dashboard</a>
+                <a href="#"><i class="fas fa-box"></i> Product Management</a>
+                <a href="#"><i class="fas fa-list"></i> Category Management</a>
+                <a href="#"><i class="fas fa-users"></i> User Management</a>
+                <a href="#"><i class="fas fa-shopping-cart"></i> Order Management</a>
+                <a href="#"><i class="fas fa-percent"></i> Coupon Management</a>
+                <a href="#" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </nav>
+
+        <main role="main" class="col-md-10 col-sm-12" id="content">
+            <!-- Inside the <main> element -->
+<div class="dashboard-section" id="order-management-section">
+    <h2 class="section-title">Order Management</h2>
+
+    <!-- Table to display orders with status options -->
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                  
+                    <th>Product Name</th>
+                    <th>Quantity</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Sample order items, replace with actual order data -->
+                <tr>
+                   
+                    <td>Product A</td>
+                    <td>2</td>
+                    <td>
+                        <select class="form-control" id="orderStatus1">
+                            <option value="shipped">Shipped</option>
+                            <option value="pending">Pending</option>
+                            <option value="delivered">Delivered</option>
+                        </select>
+                    </td>
+                    <td><button class="btn btn-primary" onclick="updateOrderStatus(1)">Update</button></td>
+                </tr>
+                <tr>
+                    
+                    <td>Product B</td>
+                    <td>1</td>
+                    <td>
+                        <select class="form-control" id="orderStatus2">
+                            <option value="shipped">Shipped</option>
+                            <option value="pending">Pending</option>
+                            <option value="delivered">Delivered</option>
+                        </select>
+                    </td>
+                    <td><button class="btn btn-primary" onclick="updateOrderStatus(2)">Update</button></td>
+                </tr>
+                <tr>
+                   
+                    <td>Product C</td>
+                    <td>3</td>
+                    <td>
+                        <select class="form-control" id="orderStatus3">
+                            <option value="shipped">Shipped</option>
+                            <option value="pending">Pending</option>
+                            <option value="delivered">Delivered</option>
+                        </select>
+                    </td>
+                    <td><button class="btn btn-primary" onclick="updateOrderStatus(3)">Update</button></td>
+                </tr>
+                <!-- Add more order items as needed -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    // Function to update order status
+    function updateOrderStatus(orderId) {
+        var statusSelect = document.getElementById('orderStatus' + orderId);
+        var selectedStatus = statusSelect.value;
+        
+        // Perform the logic to update the order status in your system
+        // You can make an AJAX request to your server to update the status
+        
+        // For demonstration purposes, we'll just log the selected status
+        console.log('Order #', orderId, 'status updated to:', selectedStatus);
+    }
+</script>
+
+        </main>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    // Example data
+    const userData = { count: 150 };
+    const orderData = { count: 75 };
+    const profitData = { total: 2500.50 }; // Example profit in dollars
+
+    // Display data in the overview section
+    document.getElementById('user-count').textContent = userData.count;
+    document.getElementById('order-count').textContent = orderData.count;
+    document.getElementById('total-profit').textContent = `$${profitData.total.toFixed(2)}`;
+</script>
+
+</body>
+</html>

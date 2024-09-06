@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <!-- Include Fotorama library -->
+    <link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="zoom.js"></script>
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .product-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+        }
+
+        .main-content {
+            flex: 1;
+        }
+
+        .fotorama {
+            width: 100%;
+            max-height: 400px;
+            margin-bottom: 20px;
+        }
+
+        .small-images {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .small-image {
+            width: 30%;
+            max-height: 80px;
+            cursor: pointer;
+        }
+
+        .product-description {
+            flex: 1;
+            margin-left: 20px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+<div class="product-container">
+    <div class="main-content">
+        <div class="fotorama" data-nav="thumbs">
+            <img src="download (2).jpeg" alt="Product Image 1" data-imagezoom="high-res-image1.jpg">
+            <img src="your-product-image2.jpg" alt="Product Image 2" data-imagezoom="high-res-image2.jpg">
+            <!-- Add more images as needed -->
+            
+            <!-- Add more images as needed -->
+        </div>
+        <div class="small-images">
+            <img class="small-image" src="small-image1.jpg" alt="Small Image 1">
+            <img class="small-image" src="small-image2.jpg" alt="Small Image 2">
+            <img class="small-image" src="small-image3.jpg" alt="Small Image 3">
+        </div>
+    </div>
+    <div class="product-description">
+        <h1>Your Product Name</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>Price: $19.99</p>
+        <button>Add to Cart</button>
+    </div>
+</div>
+<script>
+    $(document).ready(function(){
+      $('[data-imagezoom]').imageZoom();
+    });
+  </script>
+  
+
+<script>
+    // Initialize Fotorama
+    document.addEventListener('DOMContentLoaded', function () {
+        $('.fotorama').fotorama();
+    });
+</script>
+
+</body>
+</html>
